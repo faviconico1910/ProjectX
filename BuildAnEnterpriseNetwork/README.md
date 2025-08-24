@@ -26,5 +26,12 @@
 - Installation steps are the same as *** Build Directory Services Server *** when we use Windows 11 Enterprise ISO file instead
 - The computer name is ```project-x-win-client``` and the password is ```@password123!```. This password is used for all other computers.
 - Change workgroup to ```project-x-win-client``` and the domain is our DC ```corp.project-x-dc.com```. The account now is ```johnd@corp.project-x-dc.com```
-### Setup Ubuntu Desktop
+### Setup Ubuntu Desktop (demo-project-x-linux-client)
 - The owner name is ``` Jane Doe ``` and the computer name is linux-client
+### Setup CORP-SVR (dedicated server)
+- Make a clone from ```demo-project-x-linux-client```
+- Change IP address to ```10.0.0.8```, everything else stay the same
+- Change hostname to ```corp-svr```: ```sudo hostnamectl set-hostname corp-svr```
+- Add a new user ```project-x-admin``` (admin account)
+- Connect with AC DC: ``` sudo net ads join -U Administrator ```
+- Install Docker Engine using apt 
