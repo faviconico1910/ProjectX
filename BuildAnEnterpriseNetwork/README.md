@@ -34,4 +34,25 @@
 - Change hostname to ```corp-svr```: ```sudo hostnamectl set-hostname corp-svr```
 - Add a new user ```project-x-admin``` (admin account)
 - Connect with AC DC: ``` sudo net ads join -U Administrator ```
-- Install Docker Engine using apt 
+- Install Docker Engine using apt
+### Setup MailHog
+- What is MailHog?:
+- Create docker-compose.yml in ``` /home ``` in the CORP-SVR and write down these codes:
+
+```
+version: "3"
+services:
+  mailhog:
+    image: mailhog/mailhog
+    container_name: mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+```
+- Build docker and we are able to see our server when search the browser
+<img width="1324" height="764" alt="image" src="https://github.com/user-attachments/assets/74c3c52c-1769-4509-8c89-b0030a006cce" />
+
+- Create Email Poller Script
+
+
+
