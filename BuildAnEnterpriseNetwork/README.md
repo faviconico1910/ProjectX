@@ -35,7 +35,8 @@
 - Add a new user ```project-x-admin``` (admin account)
 - Connect with AC DC: ``` sudo net ads join -U Administrator ```
 - Install Docker Engine using apt
-### Setup MailHog
+## Setup MailHog
+
 - What is MailHog?:
 - Create docker-compose.yml in ``` /home ``` in the CORP-SVR and write down these codes:
 
@@ -53,6 +54,17 @@ services:
 <img width="1324" height="764" alt="image" src="https://github.com/user-attachments/assets/74c3c52c-1769-4509-8c89-b0030a006cce" />
 
 - Create Email Poller Script
+
+## Setup Security Onion (project-x-sec-work)
+
+**Security Onion** is an open-source Linux distribution built for **Network Security Monitoring (NSM)**, **threat hunting**, and **log management**.  
+It’s not just a piece of software, but an **all-in-one cybersecurity platform**.  
+
+###  Key Features
+- **Network Security Monitoring (NSM)** → monitors all traffic, detects anomalies, attacks, and malware.
+- **Threat Hunting** → SOC analysts can query logs, look for IOCs, and analyze attacks.
+- **Log Management** → centralizes logs from firewalls, Windows, Linux, and endpoints.
+- **Incident Response** → integrates workflows to handle incidents when they are detected.
 
 
 
