@@ -66,5 +66,4 @@ It’s not just a piece of software, but an **all-in-one cybersecurity platform*
 - **Log Management** → centralizes logs from firewalls, Windows, Linux, and endpoints.
 - **Incident Response** → integrates workflows to handle incidents when they are detected.
 
-
-
+Our Security Onion will have an IP address which is ```10.0.0.103/24``` and default gateway is ```10.0.0.1```.
