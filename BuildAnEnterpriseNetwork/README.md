@@ -67,3 +67,7 @@ It’s not just a piece of software, but an **all-in-one cybersecurity platform*
 - **Incident Response** → integrates workflows to handle incidents when they are detected.
 
 Our Security Onion will have an IP address which is ```10.0.0.103/24``` and default gateway is ```10.0.0.1```.
+## Setup Security Server (demo-project-x-sec-box)
+- Clone our ``` demo-project-x-linux-client ``` and rename it as ``` demo-project-x-sec-box ```
+- Change out hostname from ```linux-client``` to ```sec-box```. Besides, add new user called ``` sec-user ``` and change IP address to ``` 10.0.0.10 ```
+- Finally, connect to our AC DC.
