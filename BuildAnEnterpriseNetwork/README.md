@@ -34,4 +34,40 @@
 - Change hostname to ```corp-svr```: ```sudo hostnamectl set-hostname corp-svr```
 - Add a new user ```project-x-admin``` (admin account)
 - Connect with AC DC: ``` sudo net ads join -U Administrator ```
-- Install Docker Engine using apt 
+- Install Docker Engine using apt
+## Setup MailHog
+
+- What is MailHog?:
+- Create docker-compose.yml in ``` /home ``` in the CORP-SVR and write down these codes:
+
+```
+version: "3"
+services:
+  mailhog:
+    image: mailhog/mailhog
+    container_name: mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+```
+- Build docker and we are able to see our server when search the browser
+<img width="1324" height="764" alt="image" src="https://github.com/user-attachments/assets/74c3c52c-1769-4509-8c89-b0030a006cce" />
+
+- Create Email Poller Script
+
+## Setup Security Onion (project-x-sec-work)
+
+**Security Onion** is an open-source Linux distribution built for **Network Security Monitoring (NSM)**, **threat hunting**, and **log management**.  
+It’s not just a piece of software, but an **all-in-one cybersecurity platform**.  
+
+###  Key Features
+- **Network Security Monitoring (NSM)** → monitors all traffic, detects anomalies, attacks, and malware.
+- **Threat Hunting** → SOC analysts can query logs, look for IOCs, and analyze attacks.
+- **Log Management** → centralizes logs from firewalls, Windows, Linux, and endpoints.
+- **Incident Response** → integrates workflows to handle incidents when they are detected.
+
+Our Security Onion will have an IP address which is ```10.0.0.103/24``` and default gateway is ```10.0.0.1```.
+## Setup Security Server (demo-project-x-sec-box)
+- Clone our ``` demo-project-x-linux-client ``` and rename it as ``` demo-project-x-sec-box ```
+- Change out hostname from ```linux-client``` to ```sec-box```. Besides, add new user called ``` sec-user ``` and change IP address to ``` 10.0.0.10 ```
+- Finally, connect to our AC DC.
