@@ -1,4 +1,4 @@
-<img width="764" height="763" alt="image" src="https://github.com/user-attachments/assets/a9867ff5-ec56-4cea-aa45-cb9f04f04874" />### What is Active Directory?
+### What is Active Directory?
 - A service developed by Microsoft to provide authentication and authorization to users on the network
 - Key components:
   + Authentication: Verify user identity using credentials
@@ -79,5 +79,9 @@ Our Security Onion will have an IP address which is ```10.0.0.103/24``` and defa
 - Join our ``` sec-user ``` to domain ``` corp.project-x-dc.com ``` and login to this account.
 
 <img width="764" height="763" alt="image" src="https://github.com/user-attachments/assets/64a043b6-ec39-42e1-9b74-a764d83d9526" />
+
+## Setup Wazuh
+Wazuh is an open-source Security Information and Event Management (SIEM) and Extended Detection and Response (XDR) platform designed for monitoring and protecting hybrid cloud environments, including endpoints, cloud workloads, and data centers
+
 
 
