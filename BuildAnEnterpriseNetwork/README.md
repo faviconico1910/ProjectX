@@ -1,4 +1,4 @@
-### What is Active Directory?
+<img width="764" height="763" alt="image" src="https://github.com/user-attachments/assets/a9867ff5-ec56-4cea-aa45-cb9f04f04874" />### What is Active Directory?
 - A service developed by Microsoft to provide authentication and authorization to users on the network
 - Key components:
   + Authentication: Verify user identity using credentials
@@ -70,4 +70,14 @@ Our Security Onion will have an IP address which is ```10.0.0.103/24``` and defa
 ## Setup Security Server (demo-project-x-sec-box)
 - Clone our ``` demo-project-x-linux-client ``` and rename it as ``` demo-project-x-sec-box ```
 - Change out hostname from ```linux-client``` to ```sec-box```. Besides, add new user called ``` sec-user ``` and change IP address to ``` 10.0.0.10 ```
-- Finally, connect to our AC DC.
+- Finally, connect to our AC DC, create a new user ``` sec-user ```.
+  
+<img width="423" height="371" alt="image" src="https://github.com/user-attachments/assets/5c2c8f25-457a-4d7b-afd8-9fb8efe42dbf" />
+- Add new group to ``` sec-user ```
+<img width="509" height="378" alt="image" src="https://github.com/user-attachments/assets/4299a199-64cf-4c1d-98a1-32ff3e929aee" />
+
+- Join our ``` sec-user ``` to domain ``` corp.project-x-dc.com ``` and login to this account.
+
+<img width="764" height="763" alt="image" src="https://github.com/user-attachments/assets/64a043b6-ec39-42e1-9b74-a764d83d9526" />
+
+
