@@ -54,5 +54,40 @@ Restart-Service WinRM
   <frequency>60</frequency>
  </syscheck>
 ```
-Then, restart the wazuh-manager.
+- Then, restart the wazuh-manager.
+
+- If we modify the content of secrets.txt, this event will be logged.
+<img width="1364" height="782" alt="image" src="https://github.com/user-attachments/assets/b702fd34-13ef-4ce2-a328-1bc6972cf8b0" />
+
+- Let's create a rules for this event. We are going to use the ```local_rules.xml``` file to define a custom rule to monitor for changes occurring.
+- Our new rules:
+```
+<group name="syscheck">
+ <rule id="100002" level="10">
+ <field name="file">secrets.txt</field>
+ <match>modified</match>
+ <description>File integrity monitoring alert - access to
+sensitive.txt file detected</description>
+ </rule>
+</group>
+```
+<img width="867" height="532" alt="image" src="https://github.com/user-attachments/assets/3a701dc8-1b37-40cd-b671-3392b1173e09" />
+
+- Here are some basic information about this rule:
+- Rule ID: 100002
+- Level: 10 (a high-severity alert)
+- Field: It specifically monitors the file named secrets.txt.
+- Match: The rule triggers when the file is modified.
+- Description: When this event occurs, Wazuh generates an alert indicating that there was access or modification to the sensitive file secrets.txt.
+
+- Next, create a new alert named ``` File Accessed ``` 
+<img width="404" height="120" alt="image" src="https://github.com/user-attachments/assets/9e516acd-2f7c-4d97-84af-5a3d6249d2d9" />
+
+- Then, add a trigger
+<img width="454" height="308" alt="image" src="https://github.com/user-attachments/assets/5ae2d281-a00d-49d0-98d0-1109b190b15a" />
+
+
+
+  
+
 
