@@ -44,3 +44,15 @@ Restart-Service WinRM
 
 - Click "Create" to finish.
 
+## Setup “Sensitive File” [project-x-dc]
+- Create ``` ProductionFiles ``` on ``` C:\Users\Administrator\Documents ```. Then, create a new file ``` secrets.txt ``` and put some secrets here to symbolize.
+- Edit the ``` agent.conf ```: paste the following lines of code into this
+
+```
+ <syscheck>
+  <directories check_all="yes" report_changes="yes" realtime="yes">C:\Users\Administrator\Documents\ProductionFiles </directories>
+  <frequency>60</frequency>
+ </syscheck>
+```
+Then, restart the wazuh-manager.
+
